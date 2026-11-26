@@ -6,7 +6,7 @@ The same load-balancing situations run through real HAProxy and Envoy processes 
 
 **Also in this repo:** a push-button deploy controller (`deploy/`, `cmd/pushbutton`) that rolls a build across a fleet with a hard cap on hosts out of rotation, a canary judged on live numbers and automatic rollback, tested against real HAProxy, Nginx and Apache under load; a CVE and header gate (`secgate/`); a Splunk event sender (`splunk/`); and a `/proc` based host diagnosis tool (`hostdoctor/`). See "Push-button deploys" below.
 
-Personal learning project: loopback only, one machine, HAProxy 3.4.4 and Envoy 1.38.3 locally (HAProxy from apt and Envoy 1.31 from the official image in CI). No VIPs, no real network, no production traffic.
+Runs on one machine over loopback with HAProxy 3.4.4 and Envoy 1.38.3 locally (HAProxy from apt and Envoy 1.31 from the official image in CI).
 
 ## Scenarios (`go test ./... -v`)
 
