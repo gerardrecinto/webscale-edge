@@ -32,7 +32,7 @@ Tests skip a proxy if its binary is not on `PATH`.
 - **Envoy's ring hash is not perfectly stable.** Removing a backend rebuilds the ring over the remaining hosts, and about 19% of users who were not on the removed backend moved. HAProxy's consistent hash moved none; HAProxy's default map-based hash moved 49%.
 - Envoy runs with `--concurrency 1`, because each worker thread balances independently and round robin would otherwise be approximate.
 
-## Regional failover drill (lab model, not production)
+## Regional failover drill
 
 A second part of the lab models active-passive failover between two regions, as loopback HTTP servers in one process. Replication is async and lagged on purpose, so the data loss is real and measurable.
 
